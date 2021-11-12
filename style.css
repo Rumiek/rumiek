@@ -1,0 +1,103 @@
+/*<style>*/
+	.fa-flip-horizontal{transform:scaleX(-1)}
+	.fa-flip-vertical{transform:scaleY(-1)}
+	.fa-fw{text-align:center;width:1.25em}
+	@keyframes fa-spin{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}
+	.fa-spin{animation:fa-spin 2s infinite linear}
+	*{outline:none;position:relative;-webkit-tap-highlight-color:rgba(255,255,255,0)}
+	@media only screen and (max-width:1200px){.background .bg-image{background-size:auto 100% !important}}
+	@media only screen and (max-width:600px){h1 a{display:block;font-size:18px !important}
+	.contact{padding-top:0 !important}
+	.contact button{width:100% !important;font-size:24px !important}}
+	@media only screen and (min-width:801px){.grid-x label{width:32% !important}.grid-y label{width:100% !important}}
+	@media only screen and (max-width:800px){body{padding-bottom:70px !important}
+	.contact .grid{display:block !important}
+	.contact .grid label{width:100% !important}
+	.contact .captcha{margin-left:0 !important}
+	.footer{height:70px !important}
+	.footer .layout{flex-flow:column}
+	.footer .layout .brand,.footer .layout .menu{text-align:center}
+	.footer .layout .brand{margin-bottom:15px}
+	.footer .layout .menu li{margin-right:10px !important}
+	.footer .layout .menu li:last-child{margin-right:0 !important}.
+	footer .layout .menu li a{font-size:11px !important}}
+	@media only screen and (min-width:601px) and (max-width:800px){.interface .logo h1 a{font-size:64px !important}.interface .search{margin-top:30px !important}}
+	@media only screen and (min-width:451px) and (max-width:600px){.interface .logo h1 a{font-size:50px !important}.interface .search{margin-top:30px !important}}
+	@media only screen and (max-width:450px){.interface .logo h1 a{font-size:38px !important}.interface .search{margin-top:30px !important}}
+	html{height:100%;min-height:100%}
+	body{margin:0;height:100%;min-height:100%;overflow:hidden;box-sizing:border-box;padding-bottom:50px}
+	.service-page{height:auto !important;overflow:auto !important}
+	.service-page .background .bg-image:after{background-color:rgba(0,0,0,0.75) !important}
+	.background{position:fixed;top:0;left:0;width:100%;height:100%;overflow:hidden}
+	.background .bg-image{position:absolute;display:block;top:-10%;left:-10%;width:120%;height:120%;background:transparent url('') center center no-repeat;background-size:100% auto;/*filter:blur(10px)*/}
+	/*.background .bg-image:after{position:absolute;content:" ";top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.65)}*/
+	.layout{margin:0 auto;padding:0 20px;max-width:1000px;box-sizing:border-box}
+	.home{height:100%;min-height:100%;display:flex;align-items:center;justify-content:center}
+	.home .interface{width:100%;padding:0 20px;max-width:700px;box-sizing:border-box}
+	.home .interface .logo{text-align:center}
+	.home .interface .logo h1{margin:0}
+	.home .interface .logo h1 a{color:#673ab7;font-size:72px;font-weight:400;text-decoration:none;text-shadow:0 1px 5px rgba(0,0,0,0.5)}
+	.home .interface .search form{border-radius: 24px;margin:50px 0 150px 0;display:flex;align-items:center;width:100%;height:50px;padding:0;box-sizing:border-box;}
+	.home .interface .search:hover .bg{border-color:rgba(255,255,255,0.5)}
+	.home .interface .search form #searchInput{font-family:'Roboto',sans-serif;padding:0 55px 0 20px;box-sizing:border-box;background-color:transparent;border:none;z-index:1;width:100%;height:50px;line-height:50px;font-size:16px;font-weight:400;color:rgb(0,0,0);text-transform:capitalize;}
+	.home .interface .search form #searchInput::-webkit-input-placeholder{color:rgba(0,0,0,0.5)/*rgba(255,255,255,0.33)*/;text-transform:none}
+	.home .interface .search form #searchInput::-moz-placeholder{color:rgba(0,0,0,0.5)/*rgba(255,255,255,0.33)*/;text-transform:none}
+	.home .interface .search form #searchInput:-ms-input-placeholder{color:rgba(0,0,0,0.5)/*rgba(255,255,255,0.33)*/;text-transform:none}
+	.home .interface .search form #searchInput:-moz-placeholder{color:rgba(0,0,0,0.5)/*rgba(255,255,255,0.33)*/;text-transform:none}
+	.home .interface .search form #searchInput.ac-open+.bg{border-bottom-width:0 !important}
+	.home .interface .search form #searchInput:focus+.bg{background-color:transparent/*rgba(0,0,0,0.75)*/;border-color:none/*rgba(255,255,255,0.5)*/;}
+	.home .interface .search form #searchSubmit{position:absolute;right:0;z-index:2;font-size:0;color:#ffffff;margin:0 15px}
+	.home .interface .search form #searchSubmit .fas{font-size:24px}
+	.home .interface .search form .bg{border-radius: 24px;position:absolute;display:block;top:0;left:0;width:100%;height:100%;z-index:0;box-sizing:border-box;border:2px solid transparent/*rgba(255,255,255,0.3)*/;background-color:rgba(255,255,255,0.1);transition:border-color 250ms,background-color 250ms;box-shadow: 0px 0px 3px 1px rgb(0 0 0 / 51%);}
+	.service .header{padding:40px 0 20px 0}
+	.service .header h1{font-family:'Roboto',sans-serif;margin:0;color:#673ab7;font-weight:300}
+	.service .header h1 a{margin-right:10px;color:inherit;font-size:32px;font-weight:400;text-decoration:none;text-shadow:0 1px 5px rgba(0,0,0,0.5)}
+	.service .content{padding-bottom:50px}
+	.service .content .paper{font-family:'Roboto',sans-serif;opacity:.9;color:#673ab7;font-size:13px;line-height:25px;text-align:justify}
+	.service .content .paper p{margin-bottom:20px}
+	.service .content .paper h3,.service .content .paper h4,.service .content .paper strong,.service .content .paper b{font-weight:500}
+	.service .content .paper a{color:#673ab7;text-decoration:none}
+	.service .content .paper a:hover{color:#673ab7;text-decoration: underline;}
+	.service .content .contact-done,.service .content .contact-fail{font-family:'Roboto',sans-serif;margin:20px 0 10px 0;color:#ffffff;font-size:24px;font-weight:300;padding:10px 0 10px 20px}
+	.service .content .contact-done{border-left:5px solid #05cc47}
+	.service .content .contact-fail{border-left:5px solid #ff0092}
+	.service .content .contact{color:#ffffff;padding-top:30px}
+	.service .content .contact .grid{display:flex;justify-content:space-between}
+	.service .content .contact .grid.grid-z{justify-content:left}
+	.service .content .contact .grid.grid-z label{width:32%}
+	.service .content .contact .grid label{font-family:'Roboto',sans-serif;display:block;font-size:14px;font-weight:500;margin-bottom:20px}
+	.service .content .contact .grid label input,.service .content .contact .grid label textarea{display:block;margin-top:10px;width:100%;font-family:'Roboto',sans-serif;font-size:16px;border:1px solid rgba(255,255,255,0.1);color:#ffffff;box-sizing:border-box;background-color:rgba(255,255,255,0.15)}
+	.service .content .contact .grid label input::-webkit-input-placeholder,.service .content .contact .grid label textarea::-webkit-input-placeholder{color:rgba(255,255,255,0.3);text-transform:none}
+	.service .content .contact .grid label input::-moz-placeholder,.service .content .contact .grid label textarea::-moz-placeholder{color:rgba(255,255,255,0.3);text-transform:none}
+	.service .content .contact .grid label input:-ms-input-placeholder,.service .content .contact .grid label textarea:-ms-input-placeholder{color:rgba(255,255,255,0.3);text-transform:none}
+	.service .content .contact .grid label input:-moz-placeholder,.service .content .contact .grid label textarea:-moz-placeholder{color:rgba(255,255,255,0.3);text-transform:none}
+	.service .content .contact .grid label input{height:40px;padding:0 10px;line-height:40px}
+	.service .content .contact .grid label input[name=name]{text-transform:capitalize}
+	.service .content .contact .grid label input[name=code]{text-transform:uppercase}
+	.service .content .contact .grid label textarea{width:100%;padding:10px;min-height:150px}
+	.service .content .contact .captcha{height:40px;align-self:flex-end;padding-right:40px;margin:0 0 20px 20px;box-sizing:border-box;border:1px solid rgba(255,255,255,0.1);background-color:rgba(255,255,255,0.15)}
+	.service .content .contact .captcha .image img{width:200px;height:40px}
+	.service .content .contact .captcha .reload{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;position:absolute;top:0;right:0;width:40px;height:100%;display:flex;align-items:center;justify-content:center;background-color:rgba(255,255,255,0.1)}
+	.service .content .contact .captcha .reload .icon{color:#ffffff}
+	.service .content .contact button{top:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;font-family:'Open Sans',sans-serif;cursor:pointer;margin-top:20px;padding:10px 20px;color:#ffffff;font-size:32px;font-weight:300;border-radius:5px;border:2px solid #ffffff;background-color:transparent;transition:background-color 250ms,top 250ms}
+	.service .content .contact button:hover{background-color:rgba(255,255,255,0.1)}
+	.service .content .contact button:active{top:2px}
+	.service .content .contact button .fas{margin-right:10px}
+	.footer{position:absolute;bottom:0;left:0;width:100%;height:50px}
+	.footer .layout{font-family:'Roboto',sans-serif;color:#ffffff;display:flex;justify-content:space-between}
+	.footer .layout .brand .logo{display:inline-block}
+	.footer .layout .brand .logo a{color:#673ab7;text-decoration:none}
+	.footer .layout .brand .copyright{opacity:.8;margin-left:5px;display:inline-block;color:#673ab7;}
+	.footer .layout .menu{margin:0;padding:0;font-size:0;list-style:none}
+	.footer .layout .menu li{margin-right:20px;display:inline-block}
+	.footer .layout .menu li:last-child{margin-right:0}
+	.footer .layout .menu li a{color:#673ab7;font-size:13px;text-decoration:none;text-transform:uppercase}
+	.footer .layout .menu li a:hover{text-decoration:underline}
+	.ui-autocomplete{font-family:'Roboto',sans-serif;color:#ffffff;font-size:14px}
+	.ui-autocomplete:after{display:none;position:absolute;content:" ";bottom:-40px;left:0;width:100%;height:50px;z-index:1;background:linear-gradient(to bottom, black, rgba(255,255,255,0))}
+	.ui-autocomplete .ui-menu-item{z-index:2;background-color:rgba(0,0,0,0.75);text-transform:capitalize;border-color:rgba(255,255,255,0.5);border-style:solid;border-width:0 2px 0 2px}
+	.ui-autocomplete .ui-menu-item:last-child{border-bottom-width:2px !important}
+	.ui-autocomplete .ui-menu-item .ui-menu-item-wrapper{z-index:1;padding:0 20px;line-height:30px}
+	.ui-autocomplete .ui-menu-item .ui-menu-item-wrapper.ui-state-active{margin:0 !important;background-color:rgba(255,255,255,0.1)}
+	.logo-font{font-family:'Comfortaa', cursive !important;font-weight: 400 !important}
+/*</style>*/
