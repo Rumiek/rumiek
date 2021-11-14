@@ -121,7 +121,6 @@ $(document).ready(()=>{
   $.getJSON(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=${query.type}&q=${query.q}&maxResults=${query.maxResult}&key=${query.key}`, (res)=>{
     let item = '';
     $(res.items).each((picture)=>{
-        console.log('funcionando...');
         let thumbnails = res.items[picture].snippet.thumbnails.default.url;
         let title = res.items[picture].snippet.title;
         let id = res.items[picture].id.videoId;
