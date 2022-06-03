@@ -88,7 +88,7 @@ function result(s){
                         <span class="icon">
                           <span class="fas fa-download fa-fw"></span>
                         </span>
-                        <a href="https://mp3snow.com/${pictures.id.videoId}" target="_blank">
+                        <a href="https://ytmp3x.com/${pictures.id.videoId}" target="_blank">
                             <span class="text">
                               <span class="large">Download MP3</span>
                               <span class="short">Download</span>
